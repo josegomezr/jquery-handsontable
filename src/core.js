@@ -619,7 +619,8 @@ Handsontable.Core = function (rootElement, userSettings) {
       checkIfQueueIsEmpty: function () {
         if (this.validatorsInQueue == 0 && resolved == false) {
           resolved = true;
-          this.onQueueEmpty();
+          if(this.onQueueEmpty())
+              this.onQueueEmpty();
         }
       }
     };
